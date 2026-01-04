@@ -126,10 +126,9 @@ Classical segmentation performs best under controlled illumination, which is a c
 Pixel-to-centimeter calibration is currently configured on a per-camera basis to maintain measurement accuracy.
 
 - **Template Dependency**
-
 Shape-based validation relies on orientation-consistent templates, prioritizing precision over recall.
 
-- **These are deliberate design choices aimed at reliability, transparency, and low deployment cost.**
+**These are deliberate design choices aimed at reliability, transparency, and low deployment cost.**
 ---
 
 ## Roadmap
