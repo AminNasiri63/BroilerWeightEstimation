@@ -15,23 +15,21 @@ https://github.com/user-attachments/assets/fe745700-ba96-4303-a332-41783033921b
 
 ## Why This Project Matters
 
-- Enables non-contact weight monitoring in poultry farms
-- Reduces reliance on manual weighing
-- Designed for continuous, camera-based operation
-- Prioritizes explainability and engineering simplicity
-- This makes it relevant for:
-- AgTech & Precision Livestock companies
-- Edge CV / applied computer vision roles
+- Enables non-contact weight monitoring in poultry farms.
+- Reduces reliance on manual weighing.
+- Designed for continuous, camera-based operation.
+- Prioritizes explainability and engineering simplicity.
+- Relevant Domains: AgTech & Precision Livestock · Edge / Applied Computer Vision
 ---
 
 ## Features
 
-- **End-to-End Video Pipeline**: Frame ingestion, ROI handling, segmentation, object validation, and weight estimation
-- **Classical, Learning-Free Segmentation**: HSV-based foreground extraction with morphological refinement
-- **Robust Object Selection**: Overlap rejection, boundary-touching instance removal, confidence scoring, and configurable Top-K candidate selection
+- **End-to-End Video Pipeline**: Frame ingestion, ROI handling, segmentation, object validation, and weight estimation.
+- **Classical, Learning-Free Segmentation**: HSV-based foreground extraction with morphological refinement.
+- **Robust Object Selection**: Overlap rejection, boundary-touching instance removal, confidence scoring, and configurable Top-K candidate selection.
 - **Pose-Normalized, Density-Aware Weight Estimation**: Orientation normalization + geometry-based volume computation, converted to weight using configurable broiler density (default: 900 kg/m³).
-- **Structured Outputs**: CSV logging and annotated video output for debugging and offline analysis
-- **Modular Architecture**: Strategy and Factory patterns enabling extensibility and future DL integration
+- **Structured Outputs**: CSV logging and annotated video output for debugging and offline analysis.
+- **Modular Architecture**: Strategy and Factory patterns enabling extensibility and future DL integration.
 
 ---
 
@@ -75,9 +73,9 @@ pip install opencv-python numpy
 
 The system is configured via `cameras_config.json`. Each camera entry defines:
 
-- `crop`: Region of interest coordinates (x1, y1, x2, y2)
-- `feeder`: Feeder area coordinates (for calibration)
-- `pixet_to_cm`: Pixel-to-centimeter calibration factor
+- `crop`: Region of interest coordinates (x1, y1, x2, y2).
+- `feeder`: Feeder area coordinates (for calibration).
+- `pixet_to_cm`: Pixel-to-centimeter calibration factor.
 
 Example configuration:
 
@@ -112,10 +110,10 @@ Volume estimation is performed by slicing the segmented broiler mask into vertic
 
 ## Usage
 
-1. Configure camera parameters in `cameras_config.json`
-2. Place input video files in the project directory
-3. (Optional) Adjust the Top-K candidate selection via the `top_k` parameter in the object filtering stage
-4. Update the video path in `main_execution.py` if needed
+1. Configure camera parameters in `cameras_config.json`.
+2. Place input video files in the project directory.
+3. (Optional) Adjust the Top-K candidate selection via the `top_k` parameter in the object filtering stage.
+4. Update the video path in `main_execution.py` if needed.
 5. Run the main script:
 
 ```bash
@@ -149,13 +147,19 @@ The CSV output contains the following columns:
 
 ---
 
+## Practical Notes
+
+- Continuous per-frame estimation is often unnecessary; sampling frames and top-ranked broilers within a fixed time window can reduce compute without sacrificing monitoring quality.
+
+---
+
 ## Roadmap
 
-- Integration of deep learning models for improved segmentation
-- Posture-aware frame selection to improve volume-based weight estimation accuracy
-- Multi-species support with configurable templates
-- Web interface for configuration and monitoring
-- Statistical analysis and reporting features
+- Integration of deep learning models for improved segmentation.
+- Posture-aware frame selection to improve volume-based weight estimation accuracy.
+- Multi-species support with configurable templates.
+- Web interface for configuration and monitoring.
+- Statistical analysis and reporting features.
 ---
 
 ## License
