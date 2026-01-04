@@ -20,14 +20,13 @@ Unlike deep learning–heavy solutions, this project focuses on classical CV + g
 
 ## Features
 
-- **Video Processing Pipeline**: Processes video frames from configured cameras with cropping and region-of-interest handling
-- **Classical Segmentation**: Uses HSV thresholding and morphological operations to segment broiler objects from background
-- **Object Detection & Filtering**: Advanced filtering using template matching, distance transforms, and confidence scoring to identify individual broilers
-- **Weight Calculation**: Estimates broiler weight assuming cylindrical body shape with calibrated pixel-to-centimeter conversion
-- **CSV Output**: Logs detection results including frame number, confidence scores, estimated weights, and crop regions
-- **Extensible Architecture**: Strategy pattern implementation allowing for easy extension with deep learning models
-- **Design Patterns**: Strategy, Factory
-- **Deployment Target**: Desktop, edge devices (Jetson / Raspberry Pi class)
+- **End-to-End Video Pipeline**: Frame ingestion, ROI handling, segmentation, object validation, and weight estimation
+- **Classical, Learning-Free Segmentation**: HSV-based foreground extraction with morphological refinement
+- **Robust Object Selection**: Overlap rejection, confidence scoring, and configurable Top-K candidate selection
+- **Pose-Normalized Weight Estimation**: Orientation normalization followed by geometry-based volume calculation
+- **Structured Outputs**: CSV logging for downstream analysis
+- **Modular Architecture**: Strategy and Factory patterns enabling extensibility and future DL integration
+
 ---
 
 ## Project Structure
