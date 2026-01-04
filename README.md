@@ -1,4 +1,4 @@
-# broiler weight estimation
+# Broiler Weight Estimation
 
 A production-oriented computer vision pipeline for estimating broiler chicken weight from video streams.
 The system is designed for real-world poultry houses, emphasizing robustness, interpretability, and low computational cost.
