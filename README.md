@@ -117,13 +117,16 @@ The CSV output contains the following columns:
 
 Weight estimation is based on a cylindrical body assumption to ensure computational efficiency and interpretability.
 
-- Lighting Sensitivity
+- **Lighting Sensitivity**
+- 
 Classical segmentation performs best under controlled illumination, which is a common constraint in commercial poultry houses.
 
-- Manual Calibration
+- **Manual Calibration**
+- 
 Pixel-to-centimeter calibration is currently configured on a per-camera basis to maintain measurement accuracy.
 
-- Template Dependency
+- **Template Dependency**
+- 
 Shape-based validation relies on orientation-consistent templates, prioritizing precision over recall.
 
 - **These are deliberate design choices aimed at reliability, transparency, and low deployment cost.**
