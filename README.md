@@ -106,6 +106,9 @@ Volume estimation is performed by slicing the segmented broiler mask into vertic
 
 <img width="277" height="277" alt="broiler_sliced" src="https://github.com/user-attachments/assets/6df47e37-d308-4f29-b498-61287583cdd4" />
 
+<img width="139" height="139" alt="broiler_sliced" src="https://github.com/user-attachments/assets/62762084-120e-4565-b303-bcb6b79fbda4" />
+
+
 
 ---
 
