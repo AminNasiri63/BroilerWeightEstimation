@@ -4,7 +4,7 @@ A production-oriented computer vision pipeline for estimating broiler chicken we
 The system is designed for real-world poultry houses, emphasizing robustness, interpretability, and low computational cost.
 
 Unlike deep learning–heavy solutions, this project focuses on classical CV + geometric modeling, making it suitable for edge deployment, rapid prototyping, and environments with limited labeled data.
-
+---
 
 ## Why This Project Matters
 
@@ -15,21 +15,19 @@ Unlike deep learning–heavy solutions, this project focuses on classical CV + g
 - This makes it relevant for:
 - AgTech & Precision Livestock companies
 - Edge CV / applied computer vision roles
-
+---
 
 ## Features
 
 - **Video Processing Pipeline**: Processes video frames from configured cameras with cropping and region-of-interest handling
 - **Classical Segmentation**: Uses HSV thresholding and morphological operations to segment broiler objects from background
 - **Object Detection & Filtering**: Advanced filtering using template matching, distance transforms, and confidence scoring to identify individual broilers
-- **Volume Calculation**: Estimates broiler weight assuming cylindrical body shape with calibrated pixel-to-centimeter conversion
-- **Multi-Camera Support**: Configurable for multiple camera feeds with individual crop regions and calibration parameters
-- **Real-time Visualization**: Displays processed frames with bounding boxes and weight annotations
+- **Weight Calculation**: Estimates broiler weight assuming cylindrical body shape with calibrated pixel-to-centimeter conversion
 - **CSV Output**: Logs detection results including frame number, confidence scores, estimated weights, and crop regions
 - **Extensible Architecture**: Strategy pattern implementation allowing for easy extension with deep learning models
-- **Core Libraries**: OpenCV, NumPy
 - **Design Patterns**: Strategy, Factory
 - **Deployment Target**: Desktop, edge devices (Jetson / Raspberry Pi class)
+---
 
 ## Project Structure
 
@@ -47,6 +45,7 @@ Unlike deep learning–heavy solutions, this project focuses on classical CV + g
 ├── broiler_template.png      # Template mask for broiler matching
 └── cam1.mp4                  # Sample video file
 ```
+---
 
 ## Installation
 
@@ -61,6 +60,7 @@ Unlike deep learning–heavy solutions, this project focuses on classical CV + g
 ```bash
 pip install opencv-python numpy
 ```
+---
 
 ## Configuration
 
@@ -83,6 +83,7 @@ Example configuration:
   }
 }
 ```
+---
 
 ## Usage
 
@@ -107,6 +108,7 @@ The CSV output contains the following columns:
 - `score`: Combined confidence score
 - `volume`: Estimated weight in kg
 - `crop_region`: Bounding box coordinates (x, y, w, h)
+---
 
 ## Known Tradeoffs
 
@@ -123,7 +125,7 @@ Pixel-to-centimeter calibration is currently configured on a per-camera basis to
 Shape-based validation relies on orientation-consistent templates, prioritizing precision over recall.
 
 - **These are deliberate design choices aimed at reliability, transparency, and low deployment cost.**
-
+---
 
 ## Roadmap
 
@@ -132,6 +134,7 @@ Shape-based validation relies on orientation-consistent templates, prioritizing 
 - Real-time processing optimization
 - Web interface for configuration and monitoring
 - Statistical analysis and reporting features
+---
 
 ## License
 
