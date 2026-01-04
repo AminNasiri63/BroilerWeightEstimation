@@ -5,6 +5,10 @@ The system is designed for real-world poultry houses, emphasizing robustness, in
 
 Unlike deep learning–heavy solutions, this project focuses on classical CV + geometric modeling, making it suitable for edge deployment, rapid prototyping, and environments with limited labeled data.
 
+
+https://github.com/user-attachments/assets/1c40a3ed-852b-4993-9ba5-443122df5c33
+
+
 ---
 
 ## Why This Project Matters
