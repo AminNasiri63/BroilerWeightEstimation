@@ -3,8 +3,10 @@
 A production-oriented computer vision pipeline for estimating broiler chicken weight from video streams.
 The system is designed for real-world poultry houses, emphasizing robustness, interpretability, and low computational cost.
 
-Unlike deep learning–heavy solutions, this project focuses on classical CV + geometric modeling, making it suitable for edge deployment, rapid prototyping, and environments with limited labeled data.
+Unlike deep-learning–heavy solutions, this project focuses on classical CV and geometric modeling, making it suitable for edge deployment, rapid prototyping, and environments with limited labeled data.
+---
 
+## Demo Video
 
 https://github.com/user-attachments/assets/fe745700-ba96-4303-a332-41783033921b
 
