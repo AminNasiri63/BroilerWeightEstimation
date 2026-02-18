@@ -151,6 +151,24 @@ The CSV output contains the following columns:
 
 - Continuous per-frame estimation is often unnecessary; sampling frames and top-ranked broilers within a fixed time window can reduce computation without sacrificing monitoring quality.
 
+
+---
+
+## Docker Image (Current Status)
+
+## Docker Image
+
+A Docker image is provided for this project to demonstrate an end-to-end inference pipeline.
+
+Currently, the container runs using an internal sample video for reproducibility and quick testing.  
+Support for external input videos (via mounted volumes and CLI arguments) will be added in a future update.
+
+You can download and run the image from Docker Hub:
+
+```bash
+docker pull anasiri63/broiler-weight-inference:0.0.1
+```
+
 ---
 
 ## Roadmap
