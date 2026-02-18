@@ -156,8 +156,6 @@ The CSV output contains the following columns:
 
 ## Docker Image (Current Status)
 
-## Docker Image
-
 A Docker image is provided for this project to demonstrate an end-to-end inference pipeline.
 
 Currently, the container runs using an internal sample video for reproducibility and quick testing.  
